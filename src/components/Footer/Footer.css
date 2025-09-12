@@ -1,0 +1,105 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 50px 0;
+    background-color: #000;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.footer_title {
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.footer_links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 20px;
+  }
+  
+  .footer_list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal-width columns */
+    gap: 10px 20px; /* row-gap and column-gap */
+    list-style: none; /* remove default list style */
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer_link {
+    font-size: 14px;
+    color: #999;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .footer_link:hover {
+    color: #fff; /* hover effect */
+  }
+
+  .questions {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  .language-dropdown {
+    width: 160px;
+    height: 40px;
+    padding: 0 12px;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #555;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    appearance: none; /* remove default browser arrow */
+    outline: none;
+    position: relative;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  /* On hover */
+  .language-dropdown:hover {
+    border-color: #999;
+  }
+  
+  /* On focus */
+  .language-dropdown:focus {
+    border-color: #e50914; /* Netflix red */
+    box-shadow: 0 0 0 2px rgba(229, 9, 20, 0.5);
+  }
+  
+  /* Custom arrow */
+  .language-selector {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .language-selector::after {
+    content: "▼";
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 12px;
+    pointer-events: none; /* lets you still click on the select */
+  }
+ 
+
+  .footer_text {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #555;
+  }
