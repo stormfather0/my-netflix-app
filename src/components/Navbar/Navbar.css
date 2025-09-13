@@ -20,13 +20,13 @@
 .navbar-left img {
     width: 90px;
 }
-
+/* 
 .navbar-left ul {
     display: flex;
     list-style: none;
     gap: 20px;
     cursor: pointer;
-}
+} */
 
 .navbar-right {
     display: flex;
@@ -76,3 +76,39 @@
 .navbar-profile:hover .dropdown {
     display: block;
 }
+
+
+/* Default: desktop view */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    cursor: pointer;
+  }
+  
+  /* Mobile (< 900px) */
+  @media (max-width: 900px) {
+    .nav-links {
+      display: none; /* hide by default */
+      flex-direction: column;
+      background-color: #111;
+      position: absolute;
+      top: 80px; /* below navbar */
+      left: 0;
+      width: 100%;
+      padding: 20px 0;
+      gap: 20px;
+      text-align: center;
+      z-index: 1500;
+    }
+  
+    .nav-links.show {
+      display: flex; /* only after clicking burger */
+    }
+  
+    .burger {
+      display: block;
+      font-size: 40px;
+      padding-bottom: 12px;
+    }
+  }
