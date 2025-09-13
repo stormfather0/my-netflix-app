@@ -111,4 +111,38 @@
       font-size: 40px;
       padding-bottom: 12px;
     }
+
+    
+  }
+  /* Default: Desktop view */
+.burger {
+    display: none; /* hidden by default */
+  }
+  
+  /* Mobile (< 900px) */
+  @media (max-width: 970px) {
+    .nav-links {
+      display: none; /* hide by default */
+      flex-direction: column;
+      background-color: #111;
+      position: absolute;
+      top: 80px; /* below navbar */
+      left: 0;
+      width: 100%;
+      padding: 20px 0;
+      gap: 20px;
+      text-align: center;
+      z-index: 1500;
+    }
+  
+    .nav-links.show {
+      display: flex; /* only after clicking burger */
+    }
+  
+    .burger {
+      display: block; /* show only in mobile */
+      font-size: 40px;
+      padding-bottom: 12px;
+      cursor: pointer;
+    }
   }

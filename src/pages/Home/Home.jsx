@@ -89,13 +89,11 @@ const Home = () => {
 <section>
   <h2 className='trending-now-header'>Trending Now</h2>
   <div className="trending-now-wrapper">
+
   <div className="trending-now" ref={trendingRef}>
     {movies.map((movie, index) => (
       <div key={movie.id} className="trending-card-wrapper">
-        {/* Number */}
         <span className="number-style">{index + 1}</span>
-
-        {/* Card */}
         <div className="trending-card">
           {movie.poster_path && (
             <img
@@ -104,13 +102,12 @@ const Home = () => {
               className="trending-img"
             />
           )}
-        
+        </div>
       </div>
-    </div>
-  ))}
-</div>
-    <button className="scroll-btn right" onClick={() => scroll(300)}>›</button>
+    ))}
   </div>
+
+</div>
 
 
 <div className="join-us"> 
