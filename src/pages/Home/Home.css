@@ -373,12 +373,38 @@ width: 25px;
 
 
   
-  /* =============================
+/* Desktop: default is fine */
+* =============================
    Responsive Styles
    ============================= */
 
 /* Tablet (<= 992px) */
 @media (max-width: 992px) {
+  .hero-caption {
+    bottom: 10%;
+    padding-left: 4%;
+  }
+
+  .caption-img {
+    max-width: 320px;
+  }
+
+  .hero-caption p {
+    font-size: 15px;
+    max-width: 90%;
+  }
+
+  .hero-btns .btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  /* get-started tablet */
+  .get-started {
+    height: auto; /* allow content to grow */
+    padding: 40px 4%;
+  }
+
   .get-started-title {
     font-size: 40px;
   }
@@ -387,47 +413,65 @@ width: 25px;
     font-size: 18px;
   }
 
-  .hero-caption p {
+  .get-started-description {
     font-size: 15px;
   }
 
-  .caption-img {
-    max-width: 320px;
+  .get-started-input {
+    width: 300px;
   }
 
-  .trending-card {
-    width: 160px;
-    height: 240px;
-  }
-
-  .number-style {
-    font-size: 5rem;
-    left: -12%;
+  .get-started-btn {
+    width: 180px;
+    font-size: 20px;
   }
 }
 
 /* Mobile (<= 768px) */
 @media (max-width: 768px) {
   .hero-caption {
+    position: relative;
     text-align: center;
     padding-left: 0;
+    bottom: auto;
+    margin-top: -20px;
   }
 
   .caption-img {
     width: 80%;
+    max-width: 280px;
     margin: 0 auto 20px;
+  }
+
+  .hero-caption p {
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0 auto 20px;
+    padding: 0 15px;
   }
 
   .hero-btns {
     flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .hero-btns .btn {
+    font-size: 14px;
+    padding: 6px 14px;
+    width: 80%;
+    max-width: 250px;
     justify-content: center;
   }
 
+  .hero-btns .btn img {
+    width: 20px;
+  }
+
+  /* get-started mobile */
   .get-started {
-    padding: 20px;
-    height: auto; /* prevent vertical squashing */
+    padding: 30px 20px;
+    text-align: center;
   }
 
   .get-started-title {
@@ -443,6 +487,11 @@ width: 25px;
     font-size: 14px;
   }
 
+  .input_field {
+    flex-direction: column;
+    gap: 10px;
+  }
+
   .get-started-input {
     width: 100%;
     max-width: 280px;
@@ -453,34 +502,26 @@ width: 25px;
     max-width: 280px;
     font-size: 18px;
   }
-
-  .input_field {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .trending-now-wrapper {
-    padding: 20px;
-  }
-
-  .trending-card {
-    width: 140px;
-    height: 200px;
-  }
-
-  .number-style {
-    font-size: 4rem;
-    left: -10%;
-  }
-
-  .join-us-block {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
 }
 
 /* Small Mobile (<= 480px) */
 @media (max-width: 480px) {
+  .caption-img {
+    width: 70%;
+    max-width: 220px;
+  }
+
+  .hero-caption p {
+    font-size: 13px;
+  }
+
+  .hero-btns .btn {
+    font-size: 13px;
+    padding: 6px 12px;
+    max-width: 200px;
+  }
+
+  /* get-started small mobile */
   .get-started-title {
     font-size: 22px;
   }
@@ -489,26 +530,12 @@ width: 25px;
     font-size: 14px;
   }
 
-  .hero-btns .btn {
-    font-size: 14px;
-    padding: 6px 14px;
-  }
-
-  .trending-card {
-    width: 120px;
-    height: 180px;
-  }
-
-  .number-style {
-    font-size: 3rem;
-    left: -8%;
-  }
-
-  .join-us-header {
-    font-size: 18px;
-  }
-
-  .join-us-description {
+  .get-started-description {
     font-size: 13px;
+  }
+
+  .get-started-btn {
+    font-size: 16px;
+    height: 50px;
   }
 }
