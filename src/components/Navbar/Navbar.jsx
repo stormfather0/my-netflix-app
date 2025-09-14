@@ -51,8 +51,11 @@ const SearchOverlay = ({ onClose }) => {
   }, [query]);
 
   return createPortal(
+    
     <div className="search-overlay" onClick={onClose}>
+      
       <div className="search-box" onClick={(e) => e.stopPropagation()}>
+      <h1 className="search-title">Discover exclusive movies and shows on <span className="search-title-netflix">Netflix </span> </h1>
         <input
           type="text"
           placeholder="Search movies, shows..."
@@ -67,7 +70,9 @@ const SearchOverlay = ({ onClose }) => {
         </div>
 
         {/* results grid */}
+       
         <div className="search-results">
+         
           {query.trim().length < 2 ? (
             <p className="search-hint">Type 2+ characters to search</p>
           ) : loading ? (

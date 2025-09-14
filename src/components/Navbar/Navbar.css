@@ -207,6 +207,16 @@
     background: #b20710;
   }
 
+  .search-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  .search-title-netflix {
+    color: #e50914;
+  }
+
   .icon-btn {
     background: none;     
     border: none;        

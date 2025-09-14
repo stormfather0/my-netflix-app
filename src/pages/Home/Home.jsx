@@ -23,6 +23,8 @@ const Home = () => {
     const trendingRef = useRef(null); 
     const [movies, setMovies] = useState([]);
     const API_KEY = "dc3817e72717f4092e25408ea63709ec"; 
+    const [playTitleVideo, setPlayTitleVideo] = useState(false);
+    const [moreInfo, setMoreInfo] = useState(false);
   
     useEffect(() => {
       const fetchTrendingMovies = async () => {
@@ -52,17 +54,61 @@ const Home = () => {
             <img src={hero_title} alt="" className='caption-img' />
             <p>Discovering his ties to a secret ancient order, a young man is drawn into a dangerous world of power, corruption and mystery</p>
             <div className="hero-btns">
-            <button className='btn'>
+            <button className='btn'
+            onClick={() => setPlayTitleVideo(true)}>
                 Play
                 <img src={play_icon} alt="" />
             </button>
-            <button className='btn dark-btn'> 
+            <button className='btn dark-btn'
+            onClick={() => setMoreInfo(!moreInfo)}> 
                 More Info
                 <img src={info_icon} alt="" />
             </button>
         </div>
       </div>
         </div>
+
+        {moreInfo && ( 
+          <div className='more-info'>
+              <span onClick={() => setMoreInfo(false)} className="close"> &times;</span>
+              <div>
+            <h2>The Protector</h2>
+            <ul>
+              <li>2020</li>
+              <li>4 Seasons</li>
+              <li>16+</li>
+              <li>Fantasy</li>
+
+            </ul>
+            <p>Discovering his ties to a secret ancient order, a young man living in modern Istanbul embarks on a quest to save the city from an immortal enemy.</p>
+            </div>
+            <div>Starring: Çağatay Ulusoy, Ayça Ayşin Turan, Hazar Ergüçlü
+            </div>
+            </div>
+       
+           
+        )}
+
+        {playTitleVideo && (
+  <div className="modal">
+    <span onClick={() => setPlayTitleVideo(false)} className="close">
+      &times;
+    </span>
+    <div className="modal-content">
+      <div className="modal-video">
+        <iframe
+          width="100%"
+          height="100%"
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      </div>
+    </div>
+  </div>
+)}
 {/* //get started */}
         <div className="get-started"> 
  
