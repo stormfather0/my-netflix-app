@@ -41,11 +41,7 @@ const Home = () => {
     }, []);
 
       // Scroll function
-  const scroll = (scrollOffset) => {
-    if (trendingRef.current) {
-      trendingRef.current.scrollLeft += scrollOffset;
-    }
-  };
+
     
   return (
     <div className='home'>

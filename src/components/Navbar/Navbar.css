@@ -146,3 +146,130 @@
       cursor: pointer;
     }
   }
+
+  /* Search overlay */
+.search-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* z-index: 999; */
+  }
+  
+  .search-box {
+    position: relative;
+    background: #111;
+    padding: 40px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 90%;        
+    max-width: 1000px; 
+    max-height: 90vh;   
+    overflow: hidden;
+  }
+  
+  .search-box input {
+    
+    padding: 12px 15px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+  }
+  
+  .search-box button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -5%;    
+    right: -2%; 
+    width: 40px;  
+    height: 40px;
+    background: #e50914;
+    border: none;
+    border-radius: 50%; 
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px; 
+  }
+  
+  .search-box button:hover {
+    background: #b20710;
+  }
+
+  .icon-btn {
+    background: none;     
+    border: none;        
+    padding: 0;           
+    margin: 0;
+    cursor: pointer;
+    display: flex;       
+    align-items: center;
+    justify-content: center;
+  }
+
+
+/* Close button */
+.search-actions {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+
+  /* grid layout */
+.search-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+  }
+  
+  /* grid item */
+  .search-grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  .search-grid-item:hover {
+    transform: scale(1.05);
+  }
+  
+  /* poster */
+  .search-grid-item img {
+    width: 100%;
+    max-width: 160px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  /* title */
+  .search-grid-item .title {
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+    line-height: 1.2;
+  }
+  
+  /* constrain results to 3 rows */
+  .search-results {
+    margin-top: 12px;
+    /* flex: 1; */
+    overflow-y: auto;
+
+  }
+  
+  
