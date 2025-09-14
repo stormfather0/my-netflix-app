@@ -272,5 +272,19 @@
     overflow-y: auto;
 
   }
+
+
+
+  .notifications-popup {
+    position: absolute;
+    top: 90%;
+    right: 10px;
+    width: 250px;
+    padding: 30px;
+    background-color: #1e1313;
+    /* border: 1px solid #ccc; */
+    box-shadow: 0 2px 4px rgba(42, 38, 38, 0.1);
+    /* z-index: 9999; */
+  }
   
   

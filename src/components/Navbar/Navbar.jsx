@@ -108,6 +108,8 @@ const SearchOverlay = ({ onClose }) => {
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
+  const [showNotifications, setShowNotifications] = useState(false);
+
 
   // prevent body scroll when overlay open
   useEffect(() => {
@@ -156,11 +158,16 @@ const Navbar = () => {
           <button
             type="button"
             className="icon-btn"
-            onClick={() => console.log("bell clicked")}
+            onClick={() => setShowNotifications(!showNotifications) }
             aria-label="Notifications"
           >
             <img src={bell_icon} alt="bell" className="icons" />
           </button>
+
+          {showNotifications && (
+            <div className="notifications-popup "> 
+            You have no notifications</div>
+          )}
 
           <div className="navbar-profile">
             <img src={profile_img} alt="profile" className="profile" />

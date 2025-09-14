@@ -407,6 +407,7 @@ width: 25px;
     font-size: 20px;
   }
 
+  
 
 /* Mobile (<= 768px) */
 @media (max-width: 768px) {
@@ -474,9 +475,26 @@ width: 25px;
   }
 
   .get-started-input {
-    width: 100%;
-    max-width: 280px;
-  }
+    background-color: rgba(27, 26, 26, 0.7);
+    height: 55px;
+    width: 350px;
+    padding: 0 15px;
+    border: 1px solid rgb(77, 75, 75); 
+    outline: none;  
+                      
+    border-radius: 4px;
+    font-size: 16px;
+    color: white;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus state */
+.get-started-input:focus {
+    border: 2px solid white;      /* white border on focus */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* optional glow */
+}
+
+
 
   .get-started-btn {
     width: 100%;
