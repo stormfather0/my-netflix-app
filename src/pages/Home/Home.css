@@ -184,7 +184,7 @@ width: 25px;
     to right,
     rgba(33, 13, 22, 1) 16%,
     rgba(184, 40, 105, 1),
-    rgba(229, 9, 20, 1), /* main Netflix red */
+    rgba(229, 9, 20, 1), 
     rgba(184, 40, 105, 1),
     rgba(33, 13, 22, 1) 84%
   );
@@ -197,11 +197,11 @@ width: 25px;
 /* trending */
 .trending-now-wrapper {
   position: relative; 
-  width: 80%;           /* take 80% of page width */
-  margin: 0 auto;       /* center it horizontally */
+  width: 80%;          
+  margin: 0 auto;       
   overflow-x: auto;
   overflow-y: hidden;
-  padding: 40px 40px;      /* reduce horizontal padding for proper centering */
+  padding: 40px 40px;      
   scroll-behavior: smooth;
   transition: transform 0.3s ease;
 }
@@ -224,7 +224,6 @@ width: 25px;
   }
   
   .trending-card {
-    /* position: relative; */
     
     width: 200px;      
     height: 300px ;  
@@ -238,7 +237,6 @@ width: 25px;
     text-align: center;
     display: flex;
     flex-direction: column;
-    /* transition: transform 0.3s ease;  */
     cursor: pointer;
   }
   
@@ -267,15 +265,13 @@ width: 25px;
   .trending-img {
     width: 100%;
     height: 100%;           
-    object-fit: cover;      /* fill the card completely */
+    object-fit: cover;      
     display: block;
     /* transition: transform 0.3s ease; */
   }
   
-  /* .trending-img:hover {
-    transform: scale(1.05);
-  }
-   */
+
+ 
   /* Responsive */
   @media (max-width: 768px) {
     .trending-card {
@@ -312,7 +308,7 @@ width: 25px;
     padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* header + description + image spaced nicely */
+    justify-content: space-between; 
     box-shadow: 0 4px 20px rgba(0,0,0,0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
@@ -382,7 +378,7 @@ width: 25px;
 
   /* get-started tablet */
   .get-started {
-    height: auto; /* allow content to grow */
+    height: auto; 
     padding: 40px 4%;
   }
 
@@ -490,8 +486,8 @@ width: 25px;
 
 /* Focus state */
 .get-started-input:focus {
-    border: 2px solid white;      /* white border on focus */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* optional glow */
+    border: 2px solid white;     
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); 
 }
 
 
@@ -548,7 +544,7 @@ width: 25px;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8); /* semi-transparent background */
+  background: rgba(0, 0, 0, 0.8); 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -567,7 +563,7 @@ width: 25px;
   position: relative;
   width: 80%;
   max-width: 900px;
-  aspect-ratio: 16/9; /* keeps video ratio */
+  aspect-ratio: 16/9; 
   background: #000;
   border-radius: 8px;
   overflow: hidden;
@@ -614,7 +610,7 @@ width: 25px;
   height: 100%;
 }
 
-/* Responsive adjustments */
+/* Responsive  */
 @media (max-width: 768px) {
   .modal-content {
     width: 90%;

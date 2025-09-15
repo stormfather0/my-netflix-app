@@ -87,7 +87,7 @@ const SearchOverlay = ({ onClose }) => {
                   className="search-grid-item"
                   onClick={() => {
                     console.log("clicked result", m.id, m.title);
-                    onClose(); // you could navigate to a details page here
+                    onClose(); 
                   }}
                 >
                   <img
